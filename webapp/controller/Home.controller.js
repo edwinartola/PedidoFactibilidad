@@ -26,6 +26,5 @@ sap.ui.define([
 				MessageBox.success("Pedido Firme PER001-1244 creado");
 			});
 		}
-
 	});
 });
