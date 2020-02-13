@@ -3,6 +3,8 @@ sap.ui.define([
 ], function (Controller) {
    "use strict";
    return Controller.extend("com.ey.caasa.PedidoFactibilidad.controller.App", {
-      	onInit: function () {}
+      	onInit: function () {
+      		
+      	}
    });
 });
