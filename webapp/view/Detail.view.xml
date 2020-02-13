@@ -1,0 +1,99 @@
+<mvc:View controllerName="com.ey.caasa.PedidoFactibilidad.controller.Detail" xmlns:mvc="sap.ui.core.mvc" displayBlock="true" xmlns="sap.m"
+	xmlns:l="sap.ui.layout" xmlns:core="sap.ui.core" xmlns:f="sap.ui.layout.form" xmlns:semantic="sap.m.semantic">
+	<Shell>
+		<semantic:FullscreenPage title="{i18n>title}" showNavButton="true" navButtonPress="onHome">
+			<semantic:customFooterContent>
+				<Button type="Emphasized" text="{i18n>guardar}" press="onHome"/>
+				<Button type="Reject" text="{i18n>cancelar}" press="onHome"/>
+			</semantic:customFooterContent>
+			<semantic:content>
+				<Panel class="PanelTop" expanded="true" headerText="{i18n>datos}" width="auto">
+					<content>
+						<f:SimpleForm class="FormNotTitle" editable="true" layout="ResponsiveGridLayout" labelSpanXL="4" labelSpanL="4" labelSpanM="4"
+							labelSpanS="12" adjustLabelSpan="false" emptySpanXL="0" emptySpanL="0" emptySpanM="0" emptySpanS="0" columnsXL="2" columnsL="2" columnsM="2">
+							<f:content>
+								<core:Title/>
+								<Label text="{i18n>numeroFormatoRevision}"/>
+								<Text text="PER.112.18"/>
+								<Label text="{i18n>puertoOrigen}"/>
+								<ComboBox items="{ path: '/Combo', sorter: { path: 'text' } }">
+									<core:Item key="{key}" text="{text}"/>
+								</ComboBox>
+								<Label text="{i18n>incoterm}"/>
+								<ComboBox items="{ path: '/Combo', sorter: { path: 'text' } }">
+									<core:Item key="{key}" text="{text}"/>
+								</ComboBox>
+								<core:Title/>
+								<Label text="{i18n>cliente}"/>
+								<Input></Input>
+								<Label text="{i18n>puertoDestino}"/>
+								<ComboBox items="{ path: '/Combo', sorter: { path: 'text' } }">
+									<core:Item key="{key}" text="{text}"/>
+								</ComboBox>
+								<Label text="{i18n>tipotransporte}"/>
+								<ComboBox items="{ path: '/Combo', sorter: { path: 'text' } }">
+									<core:Item key="{key}" text="{text}"/>
+								</ComboBox>
+							</f:content>
+						</f:SimpleForm>
+					</content>
+				</Panel>
+				<Panel class="PanelTop" expanded="true" headerText="{i18n>detalle}" width="auto">
+					<content>
+						<f:SimpleForm class="FormNotTitle" editable="true" layout="ResponsiveGridLayout" labelSpanXL="4" labelSpanL="4" labelSpanM="4"
+							labelSpanS="12" adjustLabelSpan="false" emptySpanXL="0" emptySpanL="0" emptySpanM="0" emptySpanS="0" columnsXL="2" columnsL="2" columnsM="2">
+							<f:content>
+								<core:Title/>
+								<Label text="{i18n>numeroFormatoRevision}"/>
+								<Text text="PER.112.18"/>
+								<Label text="{i18n>puertoOrigen}"/>
+								<ComboBox items="{ path: '/Combo', sorter: { path: 'text' } }">
+									<core:Item key="{key}" text="{text}"/>
+								</ComboBox>
+								<Label text="{i18n>incoterm}"/>
+								<ComboBox items="{ path: '/Combo', sorter: { path: 'text' } }">
+									<core:Item key="{key}" text="{text}"/>
+								</ComboBox>
+								<Label text="{i18n>incoterm}"/>
+								<ComboBox items="{ path: '/Combo', sorter: { path: 'text' } }">
+									<core:Item key="{key}" text="{text}"/>
+								</ComboBox>
+								<Label text="{i18n>incoterm}"/>
+								<ComboBox items="{ path: '/Combo', sorter: { path: 'text' } }">
+									<core:Item key="{key}" text="{text}"/>
+								</ComboBox>
+								<Label text="{i18n>incoterm}"/>
+								<ComboBox items="{ path: '/Combo', sorter: { path: 'text' } }">
+									<core:Item key="{key}" text="{text}"/>
+								</ComboBox>
+								<core:Title/>
+								<Label text="{i18n>cliente}"/>
+								<Input></Input>
+								<Label text="{i18n>puertoDestino}"/>
+								<ComboBox items="{ path: '/Combo', sorter: { path: 'text' } }">
+									<core:Item key="{key}" text="{text}"/>
+								</ComboBox>
+								<Label text="{i18n>tipotransporte}"/>
+								<ComboBox items="{ path: '/Combo', sorter: { path: 'text' } }">
+									<core:Item key="{key}" text="{text}"/>
+								</ComboBox>
+								<Label text="{i18n>incoterm}"/>
+								<ComboBox items="{ path: '/Combo', sorter: { path: 'text' } }">
+									<core:Item key="{key}" text="{text}"/>
+								</ComboBox>
+								<Label text="{i18n>incoterm}"/>
+								<ComboBox items="{ path: '/Combo', sorter: { path: 'text' } }">
+									<core:Item key="{key}" text="{text}"/>
+								</ComboBox>
+								<Label text="{i18n>incoterm}"/>
+								<ComboBox items="{ path: '/Combo', sorter: { path: 'text' } }">
+									<core:Item key="{key}" text="{text}"/>
+								</ComboBox>
+							</f:content>
+						</f:SimpleForm>
+					</content>
+				</Panel>
+			</semantic:content>
+		</semantic:FullscreenPage>
+	</Shell>
+</mvc:View>

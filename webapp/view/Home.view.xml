@@ -1,0 +1,140 @@
+<mvc:View controllerName="com.ey.caasa.PedidoFactibilidad.controller.Home" xmlns:mvc="sap.ui.core.mvc" displayBlock="true" xmlns="sap.m"
+	xmlns:t="sap.ui.table" xmlns:l="sap.ui.layout" xmlns:fb="sap.ui.comp.filterbar" xmlns:semantic="sap.m.semantic" xmlns:ui="sap.ca.ui">
+	<Shell>
+		<semantic:FullscreenPage title="{i18n>title}">
+			<semantic:customFooterContent>
+				<Button type="Emphasized" text="{i18n>crearPedidoFirme}" press="onPedido"/>
+			</semantic:customFooterContent>
+			<semantic:content>
+				<l:VerticalLayout width="100%">
+					<fb:FilterBar reset="onReset" search="onSearch" showRestoreButton="true" showClearButton="true">
+						<fb:filterGroupItems>
+							<fb:FilterGroupItem groupName="A" name="A" label="Cod. Producto" visibleInFilterBar="true">
+								<fb:control>
+									<Input type="Text"/>
+								</fb:control>
+							</fb:FilterGroupItem>
+							<fb:FilterGroupItem groupName="B" name="B" label="Fecha Disponibilidad" visibleInFilterBar="true">
+								<fb:control>
+									<DateRangeSelection displayFormat="short"/>
+								</fb:control>
+							</fb:FilterGroupItem>
+							<fb:FilterGroupItem groupName="C" name="C" label="Centro Suministro" visibleInFilterBar="true">
+								<fb:control>
+									<Input type="Text"/>
+								</fb:control>
+							</fb:FilterGroupItem>
+							<fb:FilterGroupItem groupName="D" name="D" label="Fecha Disponibilidad Real" visibleInFilterBar="true">
+								<fb:control>
+									<DateRangeSelection displayFormat="short"/>
+								</fb:control>
+							</fb:FilterGroupItem>
+						</fb:filterGroupItems>
+					</fb:FilterBar>
+				</l:VerticalLayout>
+				<t:Table threshold="15" rows="{/Cliente}" fixedColumnCount="1" selectionMode="MultiToggle" paste="onPaste" ariaLabelledBy="title"
+					rowActionCount="2">
+					<t:extension>
+						<OverflowToolbar>
+							<Title text="{i18n>listado}"/>
+							<ToolbarSpacer/>
+							<Button icon="sap-icon://add" tooltip="{i18n>agregarPedidoFactibilidad}" press="onDetail"/>
+						</OverflowToolbar>
+					</t:extension>
+					<t:columns>
+						<t:Column width="5rem">
+							<Label text="Item"/>
+							<t:template>
+								<Text text="{Item}" wrapping="false"/>
+							</t:template>
+						</t:Column>
+						<t:Column width="11rem">
+							<Label text="Cod. Producto"/>
+							<t:template>
+								<Text text="{CodProducto}" wrapping="false"/>
+							</t:template>
+						</t:Column>
+						<t:Column width="11rem">
+							<Label text="Descripción"/>
+							<t:template>
+								<Text text="{Descripcion}" wrapping="false"/>
+							</t:template>
+						</t:Column>
+						<t:Column width="11rem">
+							<Label text="Cantidad"/>
+							<t:template>
+								<Text text="{Cantidad}" wrapping="false"/>
+							</t:template>
+						</t:Column>
+						<t:Column width="11rem">
+							<Label text="UM"/>
+							<t:template>
+								<Text text="{Um}" wrapping="false"/>
+							</t:template>
+						</t:Column>
+						<t:Column width="11rem">
+							<Label text="Peso (TN)"/>
+							<t:template>
+								<Text text="{PesoTn}" wrapping="false"/>
+							</t:template>
+						</t:Column>
+						<t:Column width="11rem">
+							<Label text="Fecha Disponibilidad"/>
+							<t:template>
+								<Text text="{FechaDisponibilidad}" wrapping="false"/>
+							</t:template>
+						</t:Column>
+						<t:Column width="11rem">
+							<Label text="Centro Suministro"/>
+							<t:template>
+								<Text text="{CentroSuministro}" wrapping="false"/>
+							</t:template>
+						</t:Column>
+						<t:Column width="11rem">
+							<Label text="Costo Unitario"/>
+							<t:template>
+								<Text text="{CostoUnitario}" wrapping="false"/>
+							</t:template>
+						</t:Column>
+						<t:Column width="11rem">
+							<Label text="Precio Unitario"/>
+							<t:template>
+								<Text text="{PrecioUnitario}" wrapping="false"/>
+							</t:template>
+						</t:Column>
+						<t:Column width="11rem">
+							<Label text="Moneda"/>
+							<t:template>
+								<Text text="{Moneda}" wrapping="false"/>
+							</t:template>
+						</t:Column>
+						<t:Column width="11rem">
+							<Label text="Importe"/>
+							<t:template>
+								<Text text="{Importe}" wrapping="false"/>
+							</t:template>
+						</t:Column>
+						<t:Column width="11rem">
+							<Label text="Fecha Disponible Real"/>
+							<t:template>
+								<Text text="{FechaDisponibleReal}" wrapping="false"/>
+							</t:template>
+						</t:Column>
+						<t:Column width="11rem">
+							<Label text="Estado"/>
+							<t:template>
+								<Text text="{Estado}" wrapping="false"/>
+							</t:template>
+						</t:Column>
+					</t:columns>
+					<t:rowActionTemplate>
+						<t:RowAction>
+							<t:RowActionItem icon="sap-icon://create-form" press="onPedido"/>
+							<t:RowActionItem type="Navigation" icon="sap-icon://feeder-arrow" press="onDetail"/>
+						</t:RowAction>
+					</t:rowActionTemplate>
+				</t:Table>
+			</semantic:content>
+		</semantic:FullscreenPage>
+	</Shell>
+</mvc:View>
